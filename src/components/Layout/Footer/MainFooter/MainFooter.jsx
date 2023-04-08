@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import FooterColumn from "../FooterColumn";
-import Downloads from "../Downloads";
+import FooterColumn from "../FooterColumn/FooterColumn";
+import Downloads from "../Downloads/Downloads";
+import TextField from "../TextField/TextField";
 
-const Container = styled.footer`
+const Container = styled.div`
   background-color: black;
   display: flex;
   justify-content: space-around;
@@ -32,16 +33,15 @@ const SmallText = styled.p`
   color: #fafafa;
 `;
 
-// const TextField = styled.input``;
-
 const MainFooter = () => {
   return (
     <Container>
       <FooterColumn columnTitle={"Exclusive"}>
         <SubTitle>Subscribe</SubTitle>
         <ListItem>Get 10% off your first order</ListItem>
-        {/* MUI email here */}
+        <TextField />
       </FooterColumn>
+
       <FooterColumn columnTitle={"Support"}>
         <List>
           <ListItem>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</ListItem>
@@ -49,6 +49,7 @@ const MainFooter = () => {
           <ListItem>+88015-88888-9999</ListItem>
         </List>
       </FooterColumn>
+
       <FooterColumn columnTitle={"Account"}>
         <List>
           <ListItem>My Account</ListItem>
@@ -58,6 +59,7 @@ const MainFooter = () => {
           <ListItem>Shop</ListItem>
         </List>
       </FooterColumn>
+
       <FooterColumn columnTitle={"Quick Link"}>
         <List>
           <ListItem>Privacy Policy</ListItem>
@@ -66,6 +68,7 @@ const MainFooter = () => {
           <ListItem>Contact</ListItem>
         </List>
       </FooterColumn>
+
       <FooterColumn columnTitle={"Download App"}>
         <SmallText>Save $3 with App New User Only</SmallText>
         <Downloads />
