@@ -44,7 +44,7 @@ const MainFooter = () => {
 
       <FooterColumn columnTitle={"Support"}>
         <List>
-          <ListItem>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</ListItem>
+          <ListItem>111 Bijou sarnie, Dhaka, DH 1515, Bangladesh.</ListItem>
           <ListItem>exclusive@gmail.com</ListItem>
           <ListItem>+88015-88888-9999</ListItem>
         </List>
