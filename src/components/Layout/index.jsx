@@ -1,7 +1,8 @@
 import React from "react";
+import MainFooter from "./Footer/MainFooter";
 
 const index = () => {
-  return <div>index page</div>;
+  return <MainFooter />;
 };
 
 export default index;

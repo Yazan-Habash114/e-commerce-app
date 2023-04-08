@@ -3,6 +3,7 @@ import ProductDetails from "./pages/ProductDetails";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Layout from "./components/Layout";
+import "./App.module.css";
 
 function App() {
   return (
