@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
-import Layout from "./components/Layout/Layout";
+import Layout from "./components/Layout";
 import "./App.module.css";
 
 function App() {
