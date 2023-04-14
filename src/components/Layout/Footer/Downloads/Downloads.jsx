@@ -31,6 +31,7 @@ const Container = styled.div`
 
 const Images = styled.div`
   display: flex;
+  cursor: pointer;
 `;
 
 const SocialMedia = styled.div`
