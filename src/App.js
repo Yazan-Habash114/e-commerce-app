@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Layout from "./components/Layout/Layout";
 import "./App.module.css";
 import AppServices from "./components/AppServices/AppServices";
+import Arrivals from "./components/Arrivals/Arrivals";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           path="/"
           element={
             <>
+              <Arrivals />
               <AppServices />
               <Layout />
             </>
