@@ -1,7 +1,22 @@
+import { Box } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 import React from "react";
 
-const index = () => {
-  return <div>index</div>;
+const Description = (props) => {
+  const { description } = props;
+  const theme = createTheme({
+    DescriptionTheme: {
+      fontFamily: "Poppins",
+      fontWight: "500",
+      fontSize: "16px",
+      lineHight: "24px",
+    },
+  });
+  return (
+    <>
+      <Box sx={theme.DescriptionTheme}>{description}</Box>
+    </>
+  );
 };
 
-export default index;
+export default Description;
