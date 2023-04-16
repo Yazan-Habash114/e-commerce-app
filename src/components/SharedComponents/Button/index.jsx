@@ -33,7 +33,7 @@ const ColorButtons = (props) => {
       backgroundColor: "#00FF66",
       border: "none",
       color: "#FAFAFA",
-      padding: " 10px 28px 10px 28px",
+      padding: "16px 48px 16px 48px",
       fontSize: 16,
       lineHeight: 2,
       "&:hover": {
