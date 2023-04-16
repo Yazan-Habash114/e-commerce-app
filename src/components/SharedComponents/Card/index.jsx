@@ -71,7 +71,9 @@ const ProductCard = (props) => {
         {/* Container Contains Discount, Icons, Image of the Product */}
         <Container sx={theme.ContainerTheme}>
           {/* Discount Box */}
+
           <Box sx={theme.DiscountBoxTheme}>%15</Box>
+
           {/* Icons Box */}
           <Box sx={theme.IconsBoxTheme}>
             <Box sx={{ marginY: 0.5 }}>
