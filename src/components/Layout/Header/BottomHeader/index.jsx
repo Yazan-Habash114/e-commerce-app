@@ -5,17 +5,20 @@ import MainTitle from './MainTitle';
 import Items from './Items';
 import SearchBarAndIcons from './SerchBarAndIcons';
 import { Divider } from '@mui/material';
-
+ import styled from '@emotion/styled';
+import TopHeader from '../TopHeader';
 
 const BottomHeader = () => {
   return (
-    <AppBar position="static"
+    <AppBar
      sx={{
+      zIndex: (theme) => theme.zIndex.drawer + 1,
       backgroundColor:'white',
        width:'1440px',
        boxShadow:"none" ,
-       height:'94px'
+       height:'120px',
     }}>
+    <TopHeader/>
     <Toolbar sx={{justifyContent:'space-evenly' , alignItems:'end'}}>
       <MainTitle/>
       <Items/>

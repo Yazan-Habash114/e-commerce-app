@@ -1,7 +1,8 @@
 import React from "react";
+import Drawerside from "./DrawerSide";
+const Ad = () => {
+  return <Drawerside/>
 
-const index = () => {
-  return <div>index</div>;
 };
 
-export default index;
+export default Ad;
