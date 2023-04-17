@@ -1,6 +1,8 @@
+import { Container, Box } from "@mui/material";
+import { mockData } from "../../../data";
 import React from "react";
-const index = () => {
+const BestSellingProduct = () => {
   return <div></div>;
 };
 
-export default index;
+export default BestSellingProduct;
