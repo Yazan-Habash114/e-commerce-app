@@ -6,8 +6,9 @@ import Layout from "./components/Layout/Layout";
 import "./App.module.css";
 import AppServices from "./components/AppServices/AppServices";
 import Arrivals from "./components/Arrivals/Arrivals";
+import HomePage from "./pages/HomePage";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -25,9 +26,10 @@ function App() {
         </Route>
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/Homepage" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
