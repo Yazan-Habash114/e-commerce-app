@@ -11,9 +11,6 @@ import {
 const customIcon = (icon) => {
   return styling(icon)(({ theme }) => ({
     color: theme.status.primary,
-    "&.Mui-checked": {
-      color: theme.status.primary,
-    },
   }));
 };
 
