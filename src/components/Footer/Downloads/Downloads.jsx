@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import QRCode from "../../../../assets/QR.png";
-import GooglePlayAppStore from "../../../../assets/GooglePlayAppStore.png";
+import QRCode from "../../../assets/Footer/QR.png";
+import GooglePlayAppStore from "../../../assets/Footer/GooglePlayAppStore.png";
 import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
 import {
   createTheme,
