@@ -64,14 +64,14 @@ const theme = createTheme({
   },
 });
 const ProductCard = (props) => {
-  const { image, title, rating, price } = props;
+  const { image, title, rating, price, onOff } = props;
   return (
     <div>
       <Card sx={theme.CardTheme}>
         {/* Container Contains Discount, Icons, Image of the Product */}
         <Container sx={theme.ContainerTheme}>
           {/* Discount Box */}
-          <Box sx={theme.DiscountBoxTheme}>%15</Box>
+          {onOff && <Box sx={theme.DiscountBoxTheme}>%15</Box>}
           {/* Icons Box */}
           <Box sx={theme.IconsBoxTheme}>
             <Box sx={{ marginY: 0.5 }}>
