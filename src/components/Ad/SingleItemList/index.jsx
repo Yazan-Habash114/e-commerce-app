@@ -1,22 +1,48 @@
-import { Link } from '@mui/material'
 import React from 'react'
-import {ListItem} from '@mui/material'
-import SingleItemListButton from '../SingleItemListBottun'
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Collapse from '@mui/material/Collapse';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import { List} from '@mui/material'
+import { useState } from 'react';
 
-// const menFashion=['menFashion1','menFashion2']
 const itemFashion = {
   menFashion:['menFashion1','menFashion2'],
   womenFashion:['womenFashion1','womenFashion2']
 }
-const SingleItemList = ({itemList,index}) => {
-  
-  return (
-    <ListItem>{(index === 0 || index === 1)?
-      (<SingleItemListButton itemList = {itemList} {... itemFashion} index/>):
-      (<Link fontWeight={400} fontSize={'16px'} ml={'135px'} color={'black'} underline='none' href='#'>{itemList}</Link>)
-      }
-    </ListItem>
-  )
-}
+const SingleItemList = ({ listItems }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
+
+  const renderListItem = (item) => {
+    if (item.children) {
+      return (
+        <div key={item.text}>
+          <ListItemButton onClick={handleClick}>
+            <ListItemText primary={item.text} />
+            {open ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <SingleItemList listItems={item.children} />
+            </List>
+          </Collapse>
+        </div>
+      );
+    } else {
+      return (
+        <ListItemButton key={item.text}>
+          <ListItemText primary={item.text} />
+        </ListItemButton>
+      );
+    }
+  };
+
+  return <List sx={{ml:'135px'}}>{listItems.map(item=>renderListItem(item))}</List>;
+};
 
 export default SingleItemList

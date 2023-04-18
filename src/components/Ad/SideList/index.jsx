@@ -1,18 +1,35 @@
-import { List, ListItem } from '@mui/material'
 import React from 'react'
-import SingleItemList from '../SingleItemList'
-import index from '../../Layout'
-const listItems = ['Woman’s Fashion','Men’s Fashion','Electronics','Home & Lifestyle','Sports & Outdoor','Baby’s & Toys',
-'Health & Beauty'
+import SingleItemList from '../SingleItemList';
+const listItems = [
+  {
+  text:'Woman’s Fashion',
+  children:['Woman’s Fashion1','Woman’s Fashion2']
+  },
+  {
+    text:'Men’s Fashion',
+    children:['Men’s Fashion1','Men’s Fashion2']
+  },
+  {
+    text:'Electronics'
+  },
+  {
+    text:'Home & Lifestyle'
+  },
+  {
+    text:'Sports & Outdoor'
+  },
+  {
+    text:'Baby’s & Toys'
+  },
+  {
+    text:'Health & Beauty'
+  }
 ]
 
 function SideList() {
+ 
   return (
-    <List>
-        {listItems.map((item,index)=>(
-            <SingleItemList itemList={item} index = {index} />
-        ))}
-    </List>
+     <SingleItemList listItems = {listItems} />
   )
 }
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Box } from "@mui/material";
 import phone from './phone.png'
 import TitleAd from '../TitleAd';
 import ParagraphAd from '../ParagraphAd';

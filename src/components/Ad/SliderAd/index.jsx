@@ -6,10 +6,10 @@ import { Carousel } from "react-responsive-carousel";
 const SliderAd = () => {
       return (
         <div className='wrapper-slider'>
-             <Carousel
-      infiniteLoop
-      showArrows={false}
-      renderIndicator={(onClickHandler, isSelected, index) => {
+         <Carousel
+        infiniteLoop
+        showArrows={false}
+        renderIndicator={(onClickHandler, isSelected, index) => {
         const dotStyle = {
           display: "inline-block",
           width: 12,
@@ -40,7 +40,6 @@ const SliderAd = () => {
       <AdElements/>
     </Carousel>
         </div>
-       
         )
 }
 
