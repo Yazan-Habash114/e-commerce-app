@@ -11,6 +11,7 @@ import Container from "@mui/material/Container";
 import Description from "../Description";
 import Price from "../Price";
 import { createTheme } from "@mui/material";
+import {Link} from "react-router-dom"
 const theme = createTheme({
   CardTheme: {
     boxShadow: "none",
@@ -64,9 +65,10 @@ const theme = createTheme({
   },
 });
 const ExploreCard = (props) => {
-  const { image, title, rating, price, discount,display } = props;
+  const { image, title, rating, price, discount,display, id } = props;
   return (
     <div>
+     <Link style={{ textDecoration: "none" }} to={`/products/${id}`}>
       <Card sx={theme.CardTheme}>
         {/* Container Contains Discount, Icons, Image of the Product */}
         <Container sx={theme.ContainerTheme}>
@@ -111,6 +113,7 @@ const ExploreCard = (props) => {
         </CardContent>
       </Card>
       <br />
+      </Link>
     </div>
   );
 };

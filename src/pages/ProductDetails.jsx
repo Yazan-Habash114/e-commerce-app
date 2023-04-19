@@ -13,6 +13,10 @@ import gameHand from "../assets/image 63.png";
 import { createTheme } from "@mui/material";
 import PlusMinus from "../components/SharedComponents/PlusMinus";
 import ColorButtons from "../components/SharedComponents/Button";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import Icon from "../components/SharedComponents/Icons";
+import AirportShuttleIcon from "@mui/icons-material/AirportShuttle";
+import LoopIcon from "@mui/icons-material/Loop";
 
 const theme = createTheme({
   backgroundImageTheme: {
@@ -96,7 +100,7 @@ const ProductDetails = ({ match, data }) => {
             <Box sx={{ margin: "0 5px" }}>
               <Ratings rating={rating} />
             </Box>
-            |<Box sx={{ margin: "0 5px"  }}>In stock</Box>
+            |<Box sx={{ margin: "0 5px" }}>In stock</Box>
           </Box>
 
           <Price priceBeforeDiscount={500} priceAfterDiscount={100} />
@@ -186,8 +190,55 @@ const ProductDetails = ({ match, data }) => {
               XL
             </button>
           </Box>
-
-          <PlusMinus />
+          <Box sx={{ display: "flex", margin: "0 -5px" }}>
+            <Box sx={{ margin: "0 5px" }}>
+              <PlusMinus />
+            </Box>
+            <Box sx={{ margin: "0 5px" }} s>
+              <ColorButtons innerText={"Buy Now!"} type={"red"} />
+            </Box>
+            <Box
+              sx={{
+                width: 40,
+                height: 40,
+                borderRadius: 0,
+                border: "0.5px solid #000000",
+                backgroundColor: "white",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                margin: "0 5px",
+              }}
+            >
+              <Icon icon={<FavoriteBorderIcon />} />
+            </Box>
+          </Box>
+          <Box sx={{ margin: "50px 0" }}>
+            <Box
+              sx={{
+                margin: "5px 5px 5px 10px",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <Box>
+                <Icon icon={<AirportShuttleIcon />} />
+              </Box>
+              <Box>
+                <Box>Free Delivery</Box>
+                <Box>Enter your postal code for Delivery Availability</Box>
+              </Box>
+            </Box>
+            <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
+              <Box>
+                <Icon icon={<LoopIcon />} />
+              </Box>
+              <Box>
+                <Box>Return Delivery</Box>
+                <Box>Free 30 Days Delivery Returns. Details</Box>
+              </Box>
+            </Box>
+          </Box>
         </Box>
       </Container>
       <FooterContainer />

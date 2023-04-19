@@ -145,6 +145,7 @@ const FlashSalesProduct = () => {
             index < 4 && (
               <Box key={item.id}>
                 <ProductCard 
+                  id={item.id}
                   image={item.image}
                   title={item.title} 
                   rating={item.rating} 
