@@ -4,11 +4,13 @@ import Arrivals from "../components/Arrivals/Arrivals";
 import AppServices from "../components/AppServices/AppServices";
 import FooterContainer from "../components/Footer/FooterContainer/FooterContainer";
 import Ads from "../components/Ads";
+import Header from "../components/Layout/Header";
 
 const HomePage = () => {
   return (
     <div>
-    <Ads />
+      <Ads />
+      <Header />
       <BestSellingProduct />
       <Arrivals />
       <AppServices />
