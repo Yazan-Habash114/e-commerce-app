@@ -9,6 +9,36 @@ import { Box } from "@mui/system";
 import Ratings from "../components/SharedComponents/Ratings";
 import Description from "../components/SharedComponents/Description";
 import Price from "../components/SharedComponents/Price";
+import gameHand from "../assets/image 63.png"
+import { createTheme } from "@mui/material";
+import PlusMinus from "../components/SharedComponents/PlusMinus";
+import ColorButtons from "../components/SharedComponents/Button";
+
+const theme = createTheme({
+  backgroundImageTheme: {
+    backgroundColor: "#F5F5F5",
+    width: 220,
+    height: 150,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "10px 0",
+  },
+  backgroundBigImageTheme: {
+    backgroundColor: "#F5F5F5",
+    width: 500,
+    height: 630,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "20px 10px",
+  },
+  imageStyleTheme: {
+    width: 170,
+    height: 120,
+    margin: "10px 0",
+  }
+});
 
 const ProductDetails = ({ match, data }) => {
   const { productId } = useParams();
@@ -20,15 +50,24 @@ const ProductDetails = ({ match, data }) => {
       <TopHeader />
       {/* <BottomHeader /> */}
       <Container sx={{ display: "flex", justifyContent: "space-around" }}>
-        <Box>
-          <Box>
-            <CardMedia component={"img"} image={tmp.image} />
-            <CardMedia component={"img"} image={tmp.image} />
-            <CardMedia component={"img"} image={tmp.image} />
-            <CardMedia component={"img"} image={tmp.image} />
+        <Box sx={{display: "flex"}}>
+          <Box sx={{margin: "10px 0"}}>
+
+            <Box sx={theme.backgroundImageTheme}>
+              <CardMedia component={"img"} image={gameHand} sx={theme.imageStyleTheme}/>
+            </Box>
+            <Box sx={theme.backgroundImageTheme}>
+            <CardMedia component={"img"} image={gameHand} sx={theme.imageStyleTheme}/>
+            </Box>
+            <Box sx={theme.backgroundImageTheme}>
+            <CardMedia component={"img"} image={gameHand} sx={theme.imageStyleTheme}/>
+            </Box>
+            <Box sx={theme.backgroundImageTheme}>
+            <CardMedia component={"img"} image={gameHand} sx={theme.imageStyleTheme}/>
+            </Box>
           </Box>
-          <Box>
-            <CardMedia component={"img"} image={tmp.image} />
+          <Box sx={theme.backgroundBigImageTheme}>
+            <CardMedia component={"img"} image={gameHand} sx={{width: 446, height: 315}}/>
           </Box>
         </Box>
 
@@ -44,7 +83,10 @@ const ProductDetails = ({ match, data }) => {
           <Price priceBeforeDiscount={500} priceAfterDiscount={100} />
           <Description description="fmdkfdkf" />
 
-          <Box sx={{ display: "flex", margin: "0 -5px" }}>
+          <Box sx={{ display: "flex", margin: "0" }}>
+            <Box>
+              Colours: 
+            </Box>
             <Box
               sx={{
                 margin: "0 5px",
@@ -65,7 +107,7 @@ const ProductDetails = ({ match, data }) => {
             ></Box>
           </Box>
 
-          <Box sx={{ display: "flex", margin: "30px" }}>
+          <Box sx={{ display: "flex", margin: "30px 0" }}>
             <Box>Size:</Box>
             <button
               style={{
@@ -73,6 +115,14 @@ const ProductDetails = ({ match, data }) => {
                 height: "32px",
                 margin: "0 10px",
                 border: "1px solid #222",
+                "&:hover": {
+                  width: "32px",
+                  height: "32px",
+                  margin: "0 10px",
+                  border: "1px solid #222",
+                  color: "white",
+                  backgroundColor: "#DB4444",
+                },
               }}
             >
               XS
@@ -119,6 +169,8 @@ const ProductDetails = ({ match, data }) => {
               XL
             </button>
           </Box>
+
+          <PlusMinus />
         </Box>
       </Container>
       <FooterContainer />
