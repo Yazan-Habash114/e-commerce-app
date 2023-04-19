@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Box } from "@mui/material";
+import { Card, Box, Toolbar } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Icon from "../Icons";
@@ -11,12 +11,18 @@ import Container from "@mui/material/Container";
 import Description from "../Description";
 import Price from "../Price";
 import { createTheme } from "@mui/material";
+import { Link } from "react-router-dom";
 const theme = createTheme({
   CardTheme: {
     boxShadow: "none",
     width: 270,
     position: "relative",
     height: 350,
+    "&:hover": {
+      HoverStyle: {
+        display: "flex",
+      }
+    }
   },
   ContainerTheme: {
     width: 270,
@@ -62,16 +68,27 @@ const theme = createTheme({
   CardContent: {
     padding: "16px 0 0 0",
   },
+  HoverStyle: {
+    backgroundColor: "black", 
+    width:270, 
+    height:41, 
+    color: "white", 
+    display: "none", 
+    textAlign: "center", 
+    alignItems: "center", 
+    justifyContent: "center"
+  }
 });
 const ProductCard = (props) => {
-  const { image, title, rating, price, onOff } = props;
+  const { image, title, rating, price, discount, id, display } = props;
   return (
     <div>
+      <Link style={{textDecoration: "none"}} to={`/products/${id}`}>
       <Card sx={theme.CardTheme}>
         {/* Container Contains Discount, Icons, Image of the Product */}
         <Container sx={theme.ContainerTheme}>
           {/* Discount Box */}
-          {onOff && <Box sx={theme.DiscountBoxTheme}>%15</Box>}
+          <Box sx={theme.DiscountBoxTheme}>{discount}</Box>
           {/* Icons Box */}
           <Box sx={theme.IconsBoxTheme}>
             <Box sx={{ marginY: 0.5 }}>
@@ -94,21 +111,27 @@ const ProductCard = (props) => {
             </Box>
           </Box>
           {/* CardMedia Contains the Image of the Product */}
-          <CardMedia
-            component="img"
-            sx={theme.ImageTheme}
-            image={image}
-            title="green iguana"
-          />
+          <Toolbar sx={{flexDirection : "column"}}>
+            <CardMedia
+              component="img"
+              sx={theme.ImageTheme}
+              image={image}
+              title="green iguana"
+            />
+            <Box>
+              Add to cart
+            </Box>
+          </Toolbar>
         </Container>
         {/* CardContent Contains The Card Description: Description, Price, Rating */}
         <CardContent sx={theme.CardContent}>
           <Description description={title} />
-          <Price priceBeforeDiscount={120} priceAfterDiscount={price} />
+          <Price display={true} priceBeforeDiscount={120} priceAfterDiscount={price} />
           <Ratings rating={rating} />
         </CardContent>
       </Card>
       <br />
+      </Link>
     </div>
   );
 };

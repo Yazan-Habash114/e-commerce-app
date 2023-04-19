@@ -1,7 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
-const Price = ({ priceAfterDiscount, priceBeforeDiscount }) => {
+
+const Price = ({ priceAfterDiscount, priceBeforeDiscount, display }) => {
   const theme = createTheme({
     OuterDiv: {
       display: "flex",
@@ -33,7 +34,11 @@ const Price = ({ priceAfterDiscount, priceBeforeDiscount }) => {
   return (
     <Box sx={theme.OuterDiv}>
       <Box sx={theme.priceAfterDiscountTheme}>{`$${priceAfterDiscount}`}</Box>
-      <Box sx={theme.priceBeforeDiscountTheme}>{`$${priceBeforeDiscount}`}</Box>
+      {display && (
+        <Box
+          sx={theme.priceBeforeDiscountTheme}
+        >{`$${priceBeforeDiscount}`}</Box>
+      )}
     </Box>
   );
 };
