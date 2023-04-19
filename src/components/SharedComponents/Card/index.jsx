@@ -21,8 +21,8 @@ const theme = createTheme({
     "&:hover": {
       HoverStyle: {
         display: "flex",
-      }
-    }
+      },
+    },
   },
   ContainerTheme: {
     width: 270,
@@ -69,68 +69,72 @@ const theme = createTheme({
     padding: "16px 0 0 0",
   },
   HoverStyle: {
-    backgroundColor: "black", 
-    width:270, 
-    height:41, 
-    color: "white", 
-    display: "none", 
-    textAlign: "center", 
-    alignItems: "center", 
-    justifyContent: "center"
-  }
+    backgroundColor: "black",
+    width: 270,
+    height: 41,
+    color: "white",
+    display: "none",
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
 const ProductCard = (props) => {
   const { image, title, rating, price, discount, id, display } = props;
+
   return (
     <div>
-      <Link style={{textDecoration: "none"}} to={`/products/${id}`}>
-      <Card sx={theme.CardTheme}>
-        {/* Container Contains Discount, Icons, Image of the Product */}
-        <Container sx={theme.ContainerTheme}>
-          {/* Discount Box */}
-          <Box sx={theme.DiscountBoxTheme}>{discount}</Box>
-          {/* Icons Box */}
-          <Box sx={theme.IconsBoxTheme}>
-            <Box sx={{ marginY: 0.5 }}>
-              <Avatar sx={theme.IconBackgroundColor}>
-                {
-                  <Icon
-                    icon={<FavoriteBorderIcon style={{ color: "black" }} />}
-                  />
-                }
-              </Avatar>
+      <Link style={{ textDecoration: "none" }} to={`/products/${id}`}>
+        <Card sx={theme.CardTheme}>
+          {/* Container Contains Discount, Icons, Image of the Product */}
+          <Container sx={theme.ContainerTheme}>
+            {/* Discount Box */}
+            <Box sx={theme.DiscountBoxTheme}>{discount}</Box>
+            {/* Icons Box */}
+            <Box sx={theme.IconsBoxTheme}>
+              <Box sx={{ marginY: 0.5 }}>
+                <Avatar sx={theme.IconBackgroundColor}>
+                  {
+                    <Icon
+                      icon={<FavoriteBorderIcon style={{ color: "black" }} />}
+                    />
+                  }
+                </Avatar>
+              </Box>
+              <Box>
+                <Avatar sx={theme.IconBackgroundColor}>
+                  {
+                    <Icon
+                      icon={
+                        <VisibilityOutlinedIcon style={{ color: "black" }} />
+                      }
+                    />
+                  }
+                </Avatar>
+              </Box>
             </Box>
-            <Box>
-              <Avatar sx={theme.IconBackgroundColor}>
-                {
-                  <Icon
-                    icon={<VisibilityOutlinedIcon style={{ color: "black" }} />}
-                  />
-                }
-              </Avatar>
-            </Box>
-          </Box>
-          {/* CardMedia Contains the Image of the Product */}
-          <Toolbar sx={{flexDirection : "column"}}>
-            <CardMedia
-              component="img"
-              sx={theme.ImageTheme}
-              image={image}
-              title="green iguana"
+            {/* CardMedia Contains the Image of the Product */}
+            <Toolbar sx={{ flexDirection: "column" }}>
+              <CardMedia
+                component="img"
+                sx={theme.ImageTheme}
+                image={image}
+                title="green iguana"
+              />
+            </Toolbar>
+          </Container>
+          {/* CardContent Contains The Card Description: Description, Price, Rating */}
+          <CardContent sx={theme.CardContent}>
+            <Description description={title} />
+            <Price
+              display={true}
+              priceBeforeDiscount={120}
+              priceAfterDiscount={price}
             />
-            <Box>
-              Add to cart
-            </Box>
-          </Toolbar>
-        </Container>
-        {/* CardContent Contains The Card Description: Description, Price, Rating */}
-        <CardContent sx={theme.CardContent}>
-          <Description description={title} />
-          <Price display={true} priceBeforeDiscount={120} priceAfterDiscount={price} />
-          <Ratings rating={rating} />
-        </CardContent>
-      </Card>
-      <br />
+            <Ratings rating={rating} />
+          </CardContent>
+        </Card>
+        <br />
       </Link>
     </div>
   );
