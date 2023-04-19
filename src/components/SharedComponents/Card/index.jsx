@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import Description from "../Description";
 import Price from "../Price";
 import { createTheme } from "@mui/material";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const theme = createTheme({
   CardTheme: {
     boxShadow: "none",
@@ -80,11 +80,11 @@ const theme = createTheme({
   }
 });
 const ProductCard = (props) => {
-  const { image, title, rating, price, discount } = props;
-  const { cardId } = props.match.params;
+  const { image, title, rating, price, discount, id } = props;
 
   return (
     <div>
+      <Link to={`/products/${id}`}>
       <Card sx={theme.CardTheme}>
         {/* Container Contains Discount, Icons, Image of the Product */}
         <Container sx={theme.ContainerTheme}>
@@ -130,11 +130,9 @@ const ProductCard = (props) => {
           <Price priceBeforeDiscount={120} priceAfterDiscount={price} />
           <Ratings rating={rating} />
         </CardContent>
-
-        <Link to={`/cards/${cardId}`}>View Details</Link>
-
       </Card>
       <br />
+      </Link>
     </div>
   );
 };

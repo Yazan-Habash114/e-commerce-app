@@ -11,14 +11,6 @@ const Test = () => {
   return <div>
     <FlashSalesProduct />
 
-    <Router>
-      <div>
-          <Route exact path="/">
-            // display your homepage or list of cards
-          </Route>
-          <Route path="/cards/:cardId" component={ProductDetails} />
-      </div>
-    </Router>
   </div>;
 }
 
