@@ -81,7 +81,6 @@ const theme = createTheme({
 });
 const ProductCard = (props) => {
   const { image, title, rating, price, discount, id, display } = props;
-
   return (
     <div>
       <Link style={{textDecoration: "none"}} to={`/products/${id}`}>

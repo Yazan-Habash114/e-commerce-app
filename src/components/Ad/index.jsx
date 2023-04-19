@@ -1,7 +1,12 @@
 import React from "react";
-
-const index = () => {
-  return <div>index</div>;
+import Drawerside from "./DrawerSide";
+import MainPart from "./MainPart";
+const Ad = () => {
+  return ( <div style={{width:'100%'}}>
+  <Drawerside/>
+  <MainPart/>
+  </div> )
 };
 
-export default index;
+export default Ad;
+

@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Full E-Commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to our super project! This project was built at the request of Gaza Sky Geeks as it was required during our training.
+We build this project for learning perpose. we use React Library to build it, with Material UI Kit.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Authors
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Ibraheem Shawhnee](https://github.com/IbraheemShawhnee)
 
-### `npm test`
+- [Yazan Habash](https://github.com/Yazan-Habash114)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Abdallah Jabr](https://github.com/Yazan-Habash114)
 
-### `npm run build`
+- [Zaid Melhem](https://github.com/Yazan-Habash114)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7b184625-70e0-42a3-bfc4-74736c448a8b/deploy-status)](https://app.netlify.com/sites/playful-granita-f7c87b/deploys)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install our project with git 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```git
+  $ git clone https://github.com/Yazan-Habash114/e-commerce-app.git
+```
+```git
+// Install Node Modules
+  $ npm i
+```
+```git
+// To install MUI Kit
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+// npm
+  $ npm install @mui/material @emotion/react @emotion/styled
+// yarn
+  $ yarn add @mui/material @emotion/react @emotion/styled
 
-## Learn More
+```  
+```git
+// To install MUI Icons Kit
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+// npm
+  $ npm install @mui/icons-material
+// yarn
+  $ yarn add @mui/icons-material
+```  
+```git
+  $ npm start
+```  
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Appendix
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [UI Design](https://www.figma.com/file/kBaK1AHo8q2CAHugcJ75kX/Full-E-Commerce-Website-UI-UX-Design-(Community)?node-id=1-3&t=3sWl6UI6LjcLkK1n-0)
+- [MUI Kit](https://mui.com/)
