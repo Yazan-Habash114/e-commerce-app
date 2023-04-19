@@ -9,8 +9,8 @@ import Header from "../components/Layout/Header";
 const HomePage = () => {
   return (
     <div>
-      <Ads />
       <Header />
+      <Ads />
       <BestSellingProduct />
       <Arrivals />
       <AppServices />
