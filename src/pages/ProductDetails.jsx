@@ -9,7 +9,7 @@ import { Box } from "@mui/system";
 import Ratings from "../components/SharedComponents/Ratings";
 import Description from "../components/SharedComponents/Description";
 import Price from "../components/SharedComponents/Price";
-import gameHand from "../assets/image 63.png"
+import gameHand from "../assets/image 63.png";
 import { createTheme } from "@mui/material";
 import PlusMinus from "../components/SharedComponents/PlusMinus";
 import ColorButtons from "../components/SharedComponents/Button";
@@ -37,56 +37,73 @@ const theme = createTheme({
     width: 170,
     height: 120,
     margin: "10px 0",
-  }
+  },
 });
 
 const ProductDetails = ({ match, data }) => {
   const { productId } = useParams();
-  let tmp = data.filter((x) => x.id === Number(productId));
-  console.log(tmp);
-
+  let tmp = data.find((x) => x.id === Number(productId));
+  const { id, title, image, price, rating, description } = tmp;
   return (
     <>
       <TopHeader />
-      {/* <BottomHeader /> */}
-      <Container sx={{ display: "flex", justifyContent: "space-around" }}>
-        <Box sx={{display: "flex"}}>
-          <Box sx={{margin: "10px 0"}}>
+      <BottomHeader />
 
+      <Container sx={{ display: "flex", justifyContent: "space-around" }}>
+        <Box sx={{ display: "flex" }}>
+          <Box sx={{ margin: "10px 0" }}>
             <Box sx={theme.backgroundImageTheme}>
-              <CardMedia component={"img"} image={gameHand} sx={theme.imageStyleTheme}/>
+              <CardMedia
+                component={"img"}
+                image={image}
+                sx={theme.imageStyleTheme}
+              />
             </Box>
             <Box sx={theme.backgroundImageTheme}>
-            <CardMedia component={"img"} image={gameHand} sx={theme.imageStyleTheme}/>
+              <CardMedia
+                component={"img"}
+                image={image}
+                sx={theme.imageStyleTheme}
+              />
             </Box>
             <Box sx={theme.backgroundImageTheme}>
-            <CardMedia component={"img"} image={gameHand} sx={theme.imageStyleTheme}/>
+              <CardMedia
+                component={"img"}
+                image={image}
+                sx={theme.imageStyleTheme}
+              />
             </Box>
             <Box sx={theme.backgroundImageTheme}>
-            <CardMedia component={"img"} image={gameHand} sx={theme.imageStyleTheme}/>
+              <CardMedia
+                component={"img"}
+                image={image}
+                sx={theme.imageStyleTheme}
+              />
             </Box>
           </Box>
           <Box sx={theme.backgroundBigImageTheme}>
-            <CardMedia component={"img"} image={gameHand} sx={{width: 446, height: 315}}/>
+            <CardMedia
+              component={"img"}
+              image={image}
+              sx={{ width: 446, height: 315 }}
+            />
           </Box>
         </Box>
 
         <Box>
-          <h1>This is title</h1>
+          <h1>{title}</h1>
           <Box sx={{ display: "flex", margin: "0 -5px" }}>
             <Box sx={{ margin: "0 5px" }}>
-              <Ratings rating={4} />
+              <Ratings rating={rating} />
             </Box>
-            |<Box sx={{ margin: "0 5px" }}>In stock</Box>
+            |<Box sx={{ margin: "0 5px"  }}>In stock</Box>
           </Box>
 
           <Price priceBeforeDiscount={500} priceAfterDiscount={100} />
-          <Description description="fmdkfdkf" />
+          <Description description={description} />
 
           <Box sx={{ display: "flex", margin: "0" }}>
-            <Box>
-              Colours: 
-            </Box>
+            <Box>Colours:</Box>
             <Box
               sx={{
                 margin: "0 5px",
