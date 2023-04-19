@@ -80,11 +80,11 @@ const theme = createTheme({
   }
 });
 const ProductCard = (props) => {
-  const { image, title, rating, price, discount, id } = props;
+  const { image, title, rating, price, discount, id, display } = props;
 
   return (
     <div>
-      <Link to={`/products/${id}`}>
+      <Link style={{textDecoration: "none"}} to={`/products/${id}`}>
       <Card sx={theme.CardTheme}>
         {/* Container Contains Discount, Icons, Image of the Product */}
         <Container sx={theme.ContainerTheme}>
@@ -127,7 +127,7 @@ const ProductCard = (props) => {
         {/* CardContent Contains The Card Description: Description, Price, Rating */}
         <CardContent sx={theme.CardContent}>
           <Description description={title} />
-          <Price priceBeforeDiscount={120} priceAfterDiscount={price} />
+          <Price display={true} priceBeforeDiscount={120} priceAfterDiscount={price} />
           <Ratings rating={rating} />
         </CardContent>
       </Card>

@@ -29,7 +29,7 @@ const theme = createTheme({
   DiscountBoxTheme: {
     width: 55,
     height: 26,
-    backgroundColor: "#DB4444",
+    backgroundColor: "#00FF66",
     borderRadius: 1,
     top: 10,
     left: 11,

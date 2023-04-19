@@ -1,5 +1,5 @@
-import { Container, Box } from "@mui/material"; 
-import { browseByCategoryData } from "../../../data"; 
+import { Container, Box, Avatar } from "@mui/material"; 
+import { browseByCategoryData } from "../../../browseData"; 
 import React from "react"; 
 import TitleTag from "../../SharedComponents/TitleTag/index"; 
 import SubTitle from "../../SharedComponents/SubTitle"; 
@@ -40,6 +40,18 @@ const BrowseByCategory = () => {
       justifyContent: "center" ,
       alignItems: "center",
     }, 
+    AvatarTheme: {
+      width: "46px",
+      height: "46px",
+      fontSize: 16,
+      color: "#000",
+      backgroundColor: "#F5F5F5;",
+      marginLeft: "5px",
+    },    
+    BoxAvatarWrapperTheme: {
+      display: "flex",
+      paddingTop: 3,
+    },
   }); 
 
   return (
@@ -57,10 +69,16 @@ const BrowseByCategory = () => {
         <Box>
           <h1>Browse By Categroy</h1>
         </Box> 
-        <Box>
-          <Icon icon={<ArrowBackIcon />}/>
-          <Icon icon={<ArrowForwardIcon />}/>
-        </Box> 
+
+        <Box sx={theme.BoxAvatarWrapperTheme}>
+            <Avatar sx={theme.AvatarTheme}>
+              <Icon icon={<ArrowBackIcon />}/>
+            </Avatar>
+
+            <Avatar sx={theme.AvatarTheme}>
+            <Icon icon={<ArrowForwardIcon />}/>
+            </Avatar>
+          </Box>
       </Box>
 
       <Box sx={theme.CardTheme}>

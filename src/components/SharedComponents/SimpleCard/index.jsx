@@ -33,6 +33,8 @@ const theme = createTheme({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    height: "70px",
+    justifyContent: "space-evenly",
   },
 });
 const BrowseCard = (props) => {
