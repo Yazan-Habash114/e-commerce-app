@@ -4,17 +4,18 @@ import Icon from "../Icons";
 import Container from "@mui/material/Container";
 import Description from "../Description";
 import { createTheme } from "@mui/material";
+
 const theme = createTheme({
   CardTheme: {
     boxShadow: "none",
-  }, 
+  },
   ContainerTheme: {
     width: "170px",
     height: "145px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    border: "1px solid gray", 
+    border: "1px solid gray",
     borderRadius: "4px",
     backgroundColor: "#ffffff",
     "&:hover": {
@@ -24,10 +25,10 @@ const theme = createTheme({
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      border: "none", 
+      border: "none",
       borderRadius: "4px",
       color: "white",
-    }
+    },
   },
   CardContent: {
     display: "flex",
@@ -43,10 +44,10 @@ const BrowseCard = (props) => {
     <div>
       <Card sx={theme.CardTheme}>
         <Container sx={theme.ContainerTheme}>
-            <Box sx={theme.CardContent}>
-                <Icon icon={icon} />
-                <Description description={title}/>
-            </Box>
+          <Box sx={theme.CardContent}>
+            <Icon icon={icon} />
+            <Description description={title} />
+          </Box>
         </Container>
       </Card>
       <br />
