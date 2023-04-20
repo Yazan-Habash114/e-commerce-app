@@ -1,5 +1,5 @@
-import React from "react";
 import { Box, createTheme } from "@mui/material";
+
 const TitleTag = () => {
   const theme = createTheme({
     TitleTagTheme: {
@@ -7,13 +7,11 @@ const TitleTag = () => {
       height: "40px",
       backgroundColor: "#DB4444",
       borderRadius: "4px",
-    }
+    },
   });
   return (
     <>
-      <Box
-        sx={theme.TitleTagTheme}
-      ></Box>
+      <Box sx={theme.TitleTagTheme}></Box>
     </>
   );
 };

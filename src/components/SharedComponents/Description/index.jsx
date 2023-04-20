@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
-import React from "react";
 
 const Description = (props) => {
   const { description } = props;

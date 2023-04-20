@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Box } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
@@ -11,7 +10,8 @@ import Container from "@mui/material/Container";
 import Description from "../Description";
 import Price from "../Price";
 import { createTheme } from "@mui/material";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+
 const theme = createTheme({
   CardTheme: {
     boxShadow: "none",
@@ -64,55 +64,62 @@ const theme = createTheme({
     padding: "16px 0 0 0",
   },
 });
+
 const ExploreCard = (props) => {
-  const { image, title, rating, price, discount,display, id } = props;
+  const { image, title, rating, price, discount, display, id } = props;
   return (
     <div>
-     <Link style={{ textDecoration: "none" }} to={`/products/${id}`}>
-      <Card sx={theme.CardTheme}>
-        {/* Container Contains Discount, Icons, Image of the Product */}
-        <Container sx={theme.ContainerTheme}>
-          {/* Discount Box */}
-          {display && <Box sx={theme.DiscountBoxTheme}>{discount}</Box>}
-          {/* Icons Box */}
-          <Box sx={theme.IconsBoxTheme}>
-            <Box sx={{ marginY: 0.5 }}>
-              <Avatar sx={theme.IconBackgroundColor}>
-                {
-                  <Icon
-                    icon={<FavoriteBorderIcon style={{ color: "black" }} />}
-                  />
-                }
-              </Avatar>
+      <Link style={{ textDecoration: "none" }} to={`/products/${id}`}>
+        <Card sx={theme.CardTheme}>
+          {/* Container Contains Discount, Icons, Image of the Product */}
+          <Container sx={theme.ContainerTheme}>
+            {/* Discount Box */}
+            {display && <Box sx={theme.DiscountBoxTheme}>{discount}</Box>}
+            {/* Icons Box */}
+            <Box sx={theme.IconsBoxTheme}>
+              <Box sx={{ marginY: 0.5 }}>
+                <Avatar sx={theme.IconBackgroundColor}>
+                  {
+                    <Icon
+                      icon={<FavoriteBorderIcon style={{ color: "black" }} />}
+                    />
+                  }
+                </Avatar>
+              </Box>
+              <Box>
+                <Avatar sx={theme.IconBackgroundColor}>
+                  {
+                    <Icon
+                      icon={
+                        <VisibilityOutlinedIcon style={{ color: "black" }} />
+                      }
+                    />
+                  }
+                </Avatar>
+              </Box>
             </Box>
-            <Box>
-              <Avatar sx={theme.IconBackgroundColor}>
-                {
-                  <Icon
-                    icon={<VisibilityOutlinedIcon style={{ color: "black" }} />}
-                  />
-                }
-              </Avatar>
+            {/* CardMedia Contains the Image of the Product */}
+            <CardMedia
+              component="img"
+              sx={theme.ImageTheme}
+              image={image}
+              title="green iguana"
+            />
+          </Container>
+          {/* CardContent Contains The Card Description: Description, Price, Rating */}
+          <CardContent sx={theme.CardContent}>
+            <Description description={title} />
+            <Box sx={{ display: "flex" }}>
+              <Price
+                display={false}
+                priceBeforeDiscount={price}
+                priceAfterDiscount={price}
+              />
+              <Ratings rating={rating} />
             </Box>
-          </Box>
-          {/* CardMedia Contains the Image of the Product */}
-          <CardMedia
-            component="img"
-            sx={theme.ImageTheme}
-            image={image}
-            title="green iguana"
-          />
-        </Container>
-        {/* CardContent Contains The Card Description: Description, Price, Rating */}
-        <CardContent sx={theme.CardContent}>
-          <Description description={title} />
-          <Box sx={{display: "flex"}}>
-            <Price display={false} priceBeforeDiscount={price} priceAfterDiscount={price} />
-            <Ratings rating={rating} />
-          </Box>
-        </CardContent>
-      </Card>
-      <br />
+          </CardContent>
+        </Card>
+        <br />
       </Link>
     </div>
   );

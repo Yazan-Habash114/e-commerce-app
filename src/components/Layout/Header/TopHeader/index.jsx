@@ -1,4 +1,3 @@
-import React from "react";
 import LinkHeader from "./Link";
 import Paragraph from "./Paragraph";
 import SelectHeader from "./Select";

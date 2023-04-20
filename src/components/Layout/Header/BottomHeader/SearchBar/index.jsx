@@ -1,4 +1,3 @@
-import React from "react";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { Paper } from "@mui/material";

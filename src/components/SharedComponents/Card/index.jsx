@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Box, Toolbar } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
@@ -12,6 +11,7 @@ import Description from "../Description";
 import Price from "../Price";
 import { createTheme } from "@mui/material";
 import { Link } from "react-router-dom";
+
 const theme = createTheme({
   CardTheme: {
     boxShadow: "none",
@@ -79,8 +79,9 @@ const theme = createTheme({
     justifyContent: "center",
   },
 });
+
 const ProductCard = (props) => {
-  const { image, title, rating, price, discount, id, display } = props;
+  const { image, title, rating, price, discount, id } = props;
 
   return (
     <div>

@@ -1,4 +1,3 @@
-import React from "react";
 import BestSellingProduct from "../components/Sliders/best-selling-products";
 import Arrivals from "../components/Arrivals/Arrivals";
 import AppServices from "../components/AppServices/AppServices";
@@ -8,6 +7,7 @@ import FlashSalesProduct from "../components/Sliders/flash-sales";
 import BrowseByCategory from "../components/Sliders/browse-by-category";
 import ExploreOurProducts from "../components/Sliders/explore-our-products";
 import Header from "../components/Layout/Header";
+
 const HomePage = () => {
   return (
     <div>

@@ -1,10 +1,7 @@
-import React from 'react'
-import AppleIcon from '@mui/icons-material/Apple';
+import AppleIcon from "@mui/icons-material/Apple";
 
 const IconTitleAd = () => {
-  return (
-    <AppleIcon sx={{color:'white',width:40,height:49}}/>
-  )
-}
+  return <AppleIcon sx={{ color: "white", width: 40, height: 49 }} />;
+};
 
-export default IconTitleAd
+export default IconTitleAd;

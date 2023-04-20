@@ -1,8 +1,8 @@
-import React from "react";
 import { Container, Box, Avatar, CardMedia } from "@mui/material";
 import JBL from "../../assets/Ads/JBL_BOOMBOX.png";
 import ColorButtons from "../SharedComponents/Button";
 import { createTheme } from "@mui/material/styles";
+
 const Ads = () => {
   const theme = createTheme({
     BlackBoxTheme: {
