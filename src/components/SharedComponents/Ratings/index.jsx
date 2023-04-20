@@ -1,6 +1,6 @@
-import React from "react";
 import Rating from "@mui/material/Rating";
 import { Box, createTheme } from "@mui/material";
+
 const Ratings = (props) => {
   const { rating } = props;
 

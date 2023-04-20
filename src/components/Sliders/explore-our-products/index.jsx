@@ -1,13 +1,12 @@
 import { Container, Box, Avatar } from "@mui/material";
-import { exploreOurProductsData, mockData } from "../../../data";
-import React from "react";
+import { mockData } from "../../../data";
 import TitleTag from "../../SharedComponents/TitleTag/index";
 import SubTitle from "../../SharedComponents/SubTitle";
 import ColorButtons from "../../SharedComponents/Button";
 import { createTheme } from "@mui/material/styles";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import ExploreCard from "../../SharedComponents/Card/exploreCard";
+import ExploreCard from "../../SharedComponents/Card/ExploreCard.jsx";
 import Icon from "../../SharedComponents/Icons";
 
 const ExploreOurProducts = () => {

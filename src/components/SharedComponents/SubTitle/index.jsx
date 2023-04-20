@@ -1,5 +1,4 @@
 import { Box, createTheme } from "@mui/material";
-import React from "react";
 
 const SubTitle = ({ SubTitle }) => {
   const theme = createTheme({

@@ -1,11 +1,11 @@
 import { Container, Box } from "@mui/material";
 import { mockData } from "../../../data";
-import React from "react";
 import TitleTag from "../../SharedComponents/TitleTag/index";
 import SubTitle from "../../SharedComponents/SubTitle";
 import ProductCard from "../../SharedComponents/Card";
 import ColorButtons from "../../SharedComponents/Button";
 import { createTheme } from "@mui/material/styles";
+
 const BestSellingProduct = () => {
   const theme = createTheme({
     TitleTheme: {
@@ -56,7 +56,6 @@ const BestSellingProduct = () => {
       </Box>
     </Container>
   );
-  return <div></div>;
 };
 
 export default BestSellingProduct;

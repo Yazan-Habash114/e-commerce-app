@@ -1,16 +1,11 @@
-import React from 'react'
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import { List} from '@mui/material'
-import { useState } from 'react';
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import { List } from "@mui/material";
+import { useState } from "react";
 
-const itemFashion = {
-  menFashion:['menFashion1','menFashion2'],
-  womenFashion:['womenFashion1','womenFashion2']
-}
 const SingleItemList = ({ listItems }) => {
   const [open, setOpen] = useState(false);
 
@@ -42,7 +37,11 @@ const SingleItemList = ({ listItems }) => {
     }
   };
 
-  return <List sx={{ml:'135px'}}>{listItems.map(item=>renderListItem(item))}</List>;
+  return (
+    <List sx={{ ml: "135px" }}>
+      {listItems.map((item) => renderListItem(item))}
+    </List>
+  );
 };
 
-export default SingleItemList
+export default SingleItemList;

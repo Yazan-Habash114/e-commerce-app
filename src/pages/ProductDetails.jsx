@@ -1,6 +1,5 @@
-import { Button, CardMedia, Container } from "@mui/material";
+import { CardMedia, Container } from "@mui/material";
 import React from "react";
-import ProductCard from "../components/SharedComponents/Card";
 import { useParams } from "react-router-dom";
 import FooterContainer from "../components/Footer/FooterContainer/FooterContainer";
 import TopHeader from "../components/Layout/Header/TopHeader";
@@ -9,7 +8,6 @@ import { Box } from "@mui/system";
 import Ratings from "../components/SharedComponents/Ratings";
 import Description from "../components/SharedComponents/Description";
 import Price from "../components/SharedComponents/Price";
-import gameHand from "../assets/image 63.png";
 import { createTheme } from "@mui/material";
 import PlusMinus from "../components/SharedComponents/PlusMinus";
 import ColorButtons from "../components/SharedComponents/Button";
@@ -44,10 +42,10 @@ const theme = createTheme({
   },
 });
 
-const ProductDetails = ({ match, data }) => {
+const ProductDetails = ({ data }) => {
   const { productId } = useParams();
   let tmp = data.find((x) => x.id === Number(productId));
-  const { id, title, image, price, rating, description } = tmp;
+  const { title, image, rating, description } = tmp;
   return (
     <>
       <TopHeader />
@@ -107,7 +105,7 @@ const ProductDetails = ({ match, data }) => {
           <Description description={description} />
 
           <Box sx={{ display: "flex", margin: "0" }}>
-            <Box>Colours:</Box>
+            <Box>Colors:</Box>
             <Box
               sx={{
                 margin: "0 5px",

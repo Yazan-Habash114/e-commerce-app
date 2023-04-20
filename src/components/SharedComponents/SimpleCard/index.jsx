@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Box } from "@mui/material";
 import Icon from "../Icons";
 import Container from "@mui/material/Container";
